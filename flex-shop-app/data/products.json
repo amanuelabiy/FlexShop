@@ -1,0 +1,67 @@
+{
+  "products": [
+    {
+      "name": "Weight Lifting Belt Leather",
+      "price": 49.99,
+      "description": "The steel buckle of the weight lifting belt is indestructible in even the heaviest use. Its quick release makes it easy to loosen or tighten your belt within seconds! Our powerlifting belt allows lifters to wear a belt up to 4 inches tighter than the traditional weightlifting belts by increasing the intra-abdominal pressure with the lever buckle.",
+      "rating": 4.5,
+      "image": "https://m.media-amazon.com/images/I/61X36R7LbsL._AC_UY1000_.jpg"
+    },
+    {
+      "name": "Gymreapers Lifting Wrist Straps",
+      "price": 14.99,
+      "description": "Gymreapers weight lifting straps provide neoprene padding to support your wrists and hands as you shrug, deadlift, or complete a heavy back day. Order them now and try them risk free. You will represent a brand that stands for something and takes no excuses. These highly durable, long “no slip” straps enhance any workout no matter the lift or routine.",
+      "rating": 4.7,
+      "image": "https://m.media-amazon.com/images/I/61+UlXddzxL._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "name": "BlenderBottle Classic Shaker Bottle",
+      "price": 7.69,
+      "description": "28-Ounce capacity (Note: measurements only go to 20 ounces)",
+      "rating": 4.8,
+      "image": "https://m.media-amazon.com/images/I/71vZmUduLlL.jpg"
+    },
+    {
+      "name": "Whey Protein Powder",
+      "price": 84.94,
+      "description": "Gold standard 100% whey blend - 24 grams blended protein consisting of whey protein isolate, whey protein concentrate, and whey peptides to support lean muscle mass - they don't call it the Gold Standard of quality for nothing",
+      "rating": 4.6,
+      "image": "https://m.media-amazon.com/images/I/81aEbH-WUYL._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "name": "WeluvFit Door Anchor Strap for Resistance Bands Exercises",
+      "price": 24.98,
+      "description": "This is a simple and practical exercise tool supporting multi Exercises. Using resistance bands and a door strap, You can complete various exercise actions at home, such as pull&stretch, flying, resistance bands training, back, forearm, foot kicking, etc.[Thanksgiving, Halloween, Christmas Day gift!]",
+      "rating": 4.1,
+      "image": "https://m.media-amazon.com/images/I/71ykAdTbh9L._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "name": "CORE Weightlifting Shoes - Squat Shoes for Men and Women",
+      "price": 69.9,
+      "description": "Our weightlifting shoes are ideal footwear for lifters, thanks to its extra stable design and comfortable fit. These are fantastic shoes for CrossFit, too!",
+      "rating": 4.2,
+      "image": "https://m.media-amazon.com/images/I/61sYKYM2q0L._AC_UY900_.jpg"
+    },
+    {
+      "name": "Outwork Nutrition Pre-Workout",
+      "price": 39.99,
+      "description": "Get the most effective Pre-Workout drink, containing 5 powerfully dosed ingredients backed by science to help you train harder, longer, and perform better.*",
+      "rating": 4.8,
+      "image": "https://outworknutrition.com/cdn/shop/products/PreWorkout-SM-front-opt_1200x.jpg?v=1717790755"
+    },
+    {
+      "name": "RitFit Weighted Medicine Ball",
+      "price": 119.99,
+      "description": "3PCS SET--6LB + 8LB + 10 LB : Whether you're a beginner or a seasoned athlete, there's a weighted exercise ball that's right for you to strengthen and tone your core and upper and lower areas of your body.",
+      "rating": 4.4,
+      "image": "https://m.media-amazon.com/images/I/81wjCvCxR6S._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "name": "BowFlex - SelectTech 552 Adjustable Dumbbells - Black",
+      "price": 429.99,
+      "description": "With just the turn of a dial you can automatically change your resistance from 5 lbs. all the way up to 52.5 lbs of weight. No more picking up 30 different dumbbells to get the results you want, these adjustable dumbbells replace 15 sets of weights. All you need is two SelectTech 552 Dumbbells to transform your body for good.",
+      "rating": 4.8,
+      "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/5845/5845062_sd.jpg"
+    }
+  ]
+}
