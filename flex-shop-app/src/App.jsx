@@ -1,5 +1,5 @@
 import "./App.css";
-import { useEffect, useReducer } from "react";
+import React, { useEffect, useReducer, useMemo } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import { Shop } from "./pages/shop/shop";
@@ -9,30 +9,33 @@ import { Contact } from "./pages/contact/contact";
 import { SignIn } from "./pages/signIn/signIn";
 import { Error } from "./pages/shop/error";
 import { Loading } from "./pages/shop/loading";
+import { CartProvider } from "./pages/cart/CartContent";
 
 import { Navbar } from "./components/navbar";
 
 const initialState = {
   products: [],
-  cart: [],
-  user: null,
+  // cart: [],
+  // user: null,
   status: "loading",
 };
 
-function reducer(state, action) {
+function shopReducer(state, action) {
   switch (action.type) {
     case "productFetchError":
       return { ...state, status: "productFetchError" };
     case "productFetchSuccess":
       return { ...state, status: "productReceived", products: action.payload };
-    case "cartItemAdded":
-      return { ...state, cart: [...state.cart, action.payload] };
+    // case "cartItemAdded":
+    //   return { ...state, cart: [...state.cart, action.payload] };
+    default:
+      throw new Error("Unknown Action");
   }
 }
 
 function App() {
-  const [{ products, cart, user, status }, dispatch] = useReducer(
-    reducer,
+  const [{ products, status }, dispatch] = useReducer(
+    shopReducer,
     initialState
   );
 
@@ -45,34 +48,36 @@ function App() {
       .catch((err) => dispatch({ type: "productFetchError" }));
   }, []);
 
-  const addToCart = (product) => {
-    dispatch({ type: "cartItemAdded", payload: product });
-    console.log(product);
-  };
+  // const addItemToCart = (product) => {
+  //   dispatch({ type: "cartItemAdded", payload: product });
+  //   // console.log(product);
+  // };
 
   return (
     <div className="App">
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route
-            path="/"
-            element={
-              status === "loading" ? (
-                <Loading />
-              ) : status === "productFetchError" ? (
-                <Error />
-              ) : (
-                <Shop products={products} addToCart={addToCart} />
-              )
-            }
-          />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/signIn" element={<SignIn />} />
-        </Routes>
-      </Router>
+      <CartProvider>
+        <Router>
+          <Navbar />
+          <Routes>
+            <Route
+              path="/"
+              element={
+                status === "loading" ? (
+                  <Loading />
+                ) : status === "productFetchError" ? (
+                  <Error />
+                ) : (
+                  <Shop products={products} />
+                )
+              }
+            />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/signIn" element={<SignIn />} />
+          </Routes>
+        </Router>
+      </CartProvider>
     </div>
   );
 }

@@ -1,11 +1,14 @@
 import React from "react";
 import { useState } from "react";
+import { useCart } from "../cart/CartContent";
 
-export const AddButton = ({ addToCart, product }) => {
+export const AddButton = ({ product }) => {
   const [addedToCart, setAddedToCart] = useState(false);
+  const { addToCart } = useCart();
 
   const handleClick = () => {
     setAddedToCart(true);
+    addToCart(product);
 
     setTimeout(() => {
       setAddedToCart(false);
@@ -15,9 +18,7 @@ export const AddButton = ({ addToCart, product }) => {
   return (
     <button
       className={`add-button ${addedToCart ? "added-to-cart" : ""}`}
-      onClick={() => {
-        handleClick(), addToCart(product);
-      }}
+      onClick={handleClick}
     >
       <span>{addedToCart ? "Added to Cart" : "Add to Cart"}</span>
     </button>
