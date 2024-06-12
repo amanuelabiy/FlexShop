@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.your-cart-text {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.cart-product-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  height: 400px;
+  margin-top: 30px;
+  overflow: hidden;
+}
+
+.total-price {
+  font-size: 1.5rem;
+  margin-top: 50px;
+  font-family: "Kanit", sans-serif;
+}
+
+.cart-product-image {
+  width: 100%;
+  height: 70%;
+  object-fit: contain;
+  margin-bottom: 30px;
+}
+
+.cart-product-price {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  margin-top: 15px;
+}
+
+.buttons-container {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}

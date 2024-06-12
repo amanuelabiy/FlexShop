@@ -22,8 +22,6 @@ export function CartProvider({ children }) {
     dispatch({ type: "cartItemAdded", payload: product });
   };
 
-  console.log(state.cart);
-
   return (
     <CartContext.Provider value={{ cart: state.cart, addToCart }}>
       {children}

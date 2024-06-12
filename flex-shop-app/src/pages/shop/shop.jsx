@@ -9,7 +9,7 @@ export const Shop = ({ products }) => {
   return (
     <div className="products-container">
       {products.map((product) => (
-        <Product key={uid()} product={product} />
+        <Product key={product.name} product={product} />
       ))}
     </div>
   );
