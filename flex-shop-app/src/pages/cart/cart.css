@@ -21,7 +21,7 @@
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 300px;
-  height: 400px;
+  height: 415px;
   margin-top: 30px;
   overflow: hidden;
 }
@@ -49,4 +49,24 @@
   display: flex;
   gap: 15px;
   margin-top: 20px;
+}
+
+.cart-value-input-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.cart-value-input {
+  font-size: 1rem;
+  font-family: "Poppins";
+}
+
+.minus-btn {
+  cursor: pointer;
+}
+
+.plus-btn {
+  cursor: pointer;
 }
