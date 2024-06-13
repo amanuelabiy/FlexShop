@@ -3,7 +3,7 @@ import { FaPlusSquare, FaMinusSquare } from "react-icons/fa";
 import { useCart } from "./CartContent";
 
 export const CartValueInput = ({ value, cartProduct, individualProducts }) => {
-  const { addToCart, cart } = useCart();
+  const { addToCart, cart, removeFromCart } = useCart();
 
   const handleAddingToCart = (cartProduct) => {
     for (let item of cart) {
@@ -11,12 +11,20 @@ export const CartValueInput = ({ value, cartProduct, individualProducts }) => {
         const addedCopy = { ...item };
         addToCart(addedCopy);
         console.log("Added Copy: ", addedCopy);
-        return;
+        return null;
       }
     }
   };
 
-  const handleRemovingCartItem = (cartProduct) => {};
+  const handleRemovingCartItem = (cartProduct) => {
+    for (let item of cart) {
+      if (item.name === cartProduct.name) {
+        const addedCopy = { ...item };
+        removeFromCart(addedCopy);
+        return null;
+      }
+    }
+  };
 
   return (
     <div className="cart-value-input-container">

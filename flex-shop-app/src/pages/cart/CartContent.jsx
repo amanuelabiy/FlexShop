@@ -11,6 +11,17 @@ function cartReducer(state, action) {
     case "cartItemAdded":
       return { ...state, cart: [...state.cart, action.payload] };
     case "cartItemRemove":
+      const itemToRemoveIndex = state.cart.findIndex(
+        (item) => item.name === action.payload.name
+      );
+
+      if (itemToRemoveIndex !== -1) {
+        const updatedCart = [...state.cart];
+        updatedCart.splice(itemToRemoveIndex, 1);
+        return { ...state, cart: updatedCart };
+      }
+
+      return { ...state };
 
     default:
       throw new Error(`Unhandled action type: ${action.type}`);
