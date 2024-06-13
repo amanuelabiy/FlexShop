@@ -58,7 +58,11 @@ export const Cart = () => {
     <div className="cart-container">
       <h1 className="your-cart-text">Your Cart:</h1>
       {individualProducts.map((cartProduct) => (
-        <CartProduct key={uid()} cartProduct={cartProduct} />
+        <CartProduct
+          key={uid()}
+          cartProduct={cartProduct}
+          individualProducts={individualProducts}
+        />
       ))}
       <p className="total-price">Total Price: {totalPrice.toFixed(2)}</p>
       <div className="buttons-container">

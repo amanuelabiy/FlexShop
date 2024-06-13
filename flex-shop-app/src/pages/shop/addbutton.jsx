@@ -8,7 +8,10 @@ export const AddButton = ({ product }) => {
 
   const handleClick = () => {
     setAddedToCart(true);
-    addToCart(product);
+
+    if (!addedToCart) {
+      addToCart(product);
+    }
 
     setTimeout(() => {
       setAddedToCart(false);

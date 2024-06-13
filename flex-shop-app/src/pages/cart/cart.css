@@ -12,6 +12,7 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 100px;
+  height: auto;
 }
 
 .cart-product-container {
@@ -21,9 +22,10 @@
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 300px;
-  height: 415px;
+  min-height: 300px;
   margin-top: 30px;
   overflow: hidden;
+  height: auto;
 }
 
 .total-price {
@@ -54,19 +56,21 @@
 .cart-value-input-container {
   display: flex;
   gap: 10px;
-  margin-top: 10px;
+  margin-top: 15px;
   margin-bottom: 10px;
 }
 
 .cart-value-input {
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-family: "Poppins";
 }
 
 .minus-btn {
   cursor: pointer;
+  font-size: 1.5rem;
 }
 
 .plus-btn {
   cursor: pointer;
+  font-size: 1.5rem;
 }
