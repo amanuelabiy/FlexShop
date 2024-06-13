@@ -1,5 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const ContinueBtn = () => {
-  return <button className="continue-btn">Continue Shopping</button>;
+  return (
+    <Link to="/">
+      <button className="continue-btn">Continue Shopping</button>
+    </Link>
+  );
 };

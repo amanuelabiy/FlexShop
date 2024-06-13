@@ -1,9 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const CheckOutBtn = ({ handleClick }) => {
   return (
-    <button className="checkout-button" onClick={handleClick}>
-      Checkout
-    </button>
+    <Link to="/">
+      <button className="checkout-btn" onClick={handleClick}>
+        Checkout
+      </button>
+    </Link>
   );
 };

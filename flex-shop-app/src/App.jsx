@@ -10,6 +10,7 @@ import { SignIn } from "./pages/signIn/signIn";
 import { Error } from "./pages/shop/error";
 import { Loading } from "./pages/shop/loading";
 import { CartProvider } from "./pages/cart/CartContent";
+import { ContinueBtn } from "./pages/cart/continueBtn";
 
 import { Navbar } from "./components/navbar";
 
