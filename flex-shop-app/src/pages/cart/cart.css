@@ -146,3 +146,20 @@
   box-shadow: none;
   transform: translateY(0);
 }
+
+.cart-empty-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 110px;
+  align-items: center;
+  gap: 30px;
+}
+
+.sad-face {
+  height: 100%;
+  width: 10%;
+}
+
+.cart-empty-text {
+  font-family: "Poppins";
+}

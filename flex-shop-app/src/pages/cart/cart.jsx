@@ -4,6 +4,8 @@ import { useCart } from "./CartContent";
 import { CartProduct } from "./cartproduct";
 import { ContinueBtn } from "./continueBtn";
 import { CheckOutBtn } from "./checkOutBtn";
+import { CartEmpty } from "./cartEmpty";
+
 import { uid } from "uid";
 
 export const Cart = () => {
@@ -55,20 +57,26 @@ export const Cart = () => {
   };
 
   return (
-    <div className="cart-container">
-      <h1 className="your-cart-text">Your Cart:</h1>
-      {individualProducts.map((cartProduct) => (
-        <CartProduct
-          key={uid()}
-          cartProduct={cartProduct}
-          individualProducts={individualProducts}
-        />
-      ))}
-      <p className="total-price">Total Price: {totalPrice.toFixed(2)}</p>
-      <div className="buttons-container">
-        <ContinueBtn />
-        <CheckOutBtn handleClick={handleClick} />
-      </div>
-    </div>
+    <>
+      {cart.length === 0 ? (
+        <CartEmpty />
+      ) : (
+        <div className="cart-container">
+          <h1 className="your-cart-text">Your Cart:</h1>
+          {individualProducts.map((cartProduct) => (
+            <CartProduct
+              key={uid()}
+              cartProduct={cartProduct}
+              individualProducts={individualProducts}
+            />
+          ))}
+          <p className="total-price">Total Price: {totalPrice.toFixed(2)}</p>
+          <div className="buttons-container">
+            <ContinueBtn />
+            <CheckOutBtn handleClick={handleClick} />
+          </div>
+        </div>
+      )}
+    </>
   );
 };
